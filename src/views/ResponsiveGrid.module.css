@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+.gridContainer {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+}
+
+.dimensions {
+  display: block;
+  color: red;
+  padding-top: 4px;
+}
+
+.top1 {
+  padding: 8px;
+  float: left;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.top2 {
+  float: left;
+  padding: 8px;
+  grid-column-start: 6;
+  grid-column-end: 12;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.middle1 {
+  float: left;
+  padding: 8px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 11;
+}
+.middle2 {
+  float: left;
+  padding: 8px;
+  grid-column-start: 4;
+  grid-column-end: 12;
+  grid-row-start: 3;
+  grid-row-end: 11;
+}
+.bottom1 {
+  float: left;
+  padding: 8px;
+  grid-column-start: 1;
+  grid-column-end: 12;
+  grid-row-start: 11;
+  grid-row-end: 12;
+}
+.bottom2 {
+  float: left;
+  padding: 8px;
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  .top1 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .top2 {
+    grid-column-start: 6;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .middle1 {
+    display: none;
+  }
+  .middle2 {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    grid-row-end: 11;
+  }
+  .bottom1 {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 11;
+    grid-row-end: 12;
+  }
+  .bottom2 {
+    width: 100%;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .top1 {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .top2 {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    grid-row-end: 6;
+  }
+  .middle1 {
+    display: none;
+  }
+  .middle2 {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 6;
+    grid-row-end: 10;
+  }
+  .bottom1 {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 10;
+    grid-row-end: 11;
+  }
+  .bottom2 {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 11;
+    grid-row-end: 12;
+    display: block;
+  }
+}
